@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 1,
+        "fields": {
+            "watched": true,
+            "title": "The Notebook",
+            "rating": 4,
+            "release_date": "2004-06-25",
+            "review": "One of the best rom movies"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 2,
+        "fields": {
+            "watched": false,
+            "title": "Gundala",
+            "rating": 2,
+            "release_date": "2019-08-29",
+            "review": "No offense but i dont enjoy it"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 3,
+        "fields": {
+            "watched": true,
+            "title": "Love, Rosie",
+            "rating": 4,
+            "release_date": "2014-10-22",
+            "review": "Nice plot and fun to watch"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 4,
+        "fields": {
+            "watched": false,
+            "title": "Ready Player One",
+            "rating": 5,
+            "release_date": "2018-03-18",
+            "review": "One of the best SciFi movie"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 5,
+        "fields": {
+            "watched": false,
+            "title": "Crazy Little Thing Called Love",
+            "rating": 5,
+            "release_date": "2010-08-12",
+            "review": "Best Thai Movie"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 6,
+        "fields": {
+            "watched": true,
+            "title": "Coco",
+            "rating": 5,
+            "release_date": "2017-11-22",
+            "review": "Perfect Animation Movie"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 7,
+        "fields": {
+            "watched": true,
+            "title": "Kimi No Nawa",
+            "rating": 5,
+            "release_date": "2016-12-16",
+            "review": "Best Anime Movie off all time"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 8,
+        "fields": {
+            "watched": false,
+            "title": "Midnight Sun",
+            "rating": 5,
+            "release_date": "2018-03-30",
+            "review": "Favorite rom movies"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 9,
+        "fields": {
+            "watched": true,
+            "title": "You Are The Apple of My Eye",
+            "rating": 5,
+            "release_date": "2011-08-19",
+            "review": "Veri nice plot and story"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+            "watched": true,
+            "title": "Crazy Rich Asians",
+            "rating": 4,
+            "release_date": "2018-09-10",
+            "review": "Great actors and good plot"
+        }
+    }
+]
