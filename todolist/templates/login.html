@@ -2,41 +2,63 @@
 
 {% block meta %}
 <title>Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 {% endblock meta %}
 
 {% block content %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
 
-<div class="login">
-
-    <h1>Login</h1>
-
-    <form method="POST" action="">
+<nav class="navbar navbar-light px-4 mb-5" style="background-color: #e3f2fd;">
+    <span class="navbar-text mb-0 h5">Not Logged in</span>
+    <span class="navbar-brand mb-0 h1">Todolist</span>
+    <form action="{% url 'todolist:register' %}">
         {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
+        <button type="submit" class="btn btn-outline-primary">Register</button>
+    </form>
+</nav>
 
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
 
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
+<div class="login container d-flex flex-column justify-content-center align-items-center">
+
+    <h3 class="mb-4">Login</h3>
+
+    <form method="POST" action="" class="form-horizontal col-sm-8 col-md-6 col-lg-3">
+        {% csrf_token %}
+        {% comment %} <td>Username: </td>
+        <td><input type="text" name="username" placeholder="Username" class="form-control"></td> {% endcomment %}
+        <div class="control-group error">
+            <div class="controls mb-3">
+                <input type="text" name="username" placeholder="Username" class="form-control">
+            </div>
+        </div>
+
+        <div class="control-group error">
+            <div class="controls mb-3">
+                <input type="password" name="password" placeholder="Password" class="form-control">
+            </div>
+        </div>
+
+        {% if messages %}
+        {% for message in messages %}
+        <p><small class="text-danger">{{ message }}</small></p>
+        {% endfor %}
+        {% endif %}
+
+        {% comment %} <tr>
+            <td>Password: </td>
+            <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
+        </tr> {% endcomment %}
+        <div class="d-flex justify-content-center">
+            <input class="btn btn-primary mb-3" type="submit" value="Login">
+        </div>
         </table>
     </form>
 
-    {% if messages %}
-    <ul>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+
 
     Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
 
