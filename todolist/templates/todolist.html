@@ -148,10 +148,11 @@
                 type: "POST",
                 data: serializedData,
                 dataType: 'text',
-                success: function (data) {
+                success: function (response_data) {
                     $(".btnClick").prop('disabled', false);
                     $(".btnClick").text('Submit');
-                    $.getJSON("{% url 'todolist:show_todolist_json' %}", displayCards);
+                    $.getJSON("{% url 'todolist:show_todolist_json' %}", 
+                    displayCards);
                     $("#formModal").modal('hide');
                     $('#addTaskForm').each(function () {
                         this.reset();
